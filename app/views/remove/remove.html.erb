@@ -1,0 +1,10 @@
+<a href = "/"> <-- Back To Homepage </a>
+
+<h3> ~Delete Book~ </h3>
+
+<h3 style = "display:inline-block">Do you want to delete a book named called <%= @title %>?</h3>
+
+<%= form_tag("/remove_books/#{@urltitle}") do %>
+    <%= submit_tag("Delete Book") %>
+<% end %>
+<button onclick = "window.location.href = '/'" style = "margin-top:1%" >Cancel</button>
