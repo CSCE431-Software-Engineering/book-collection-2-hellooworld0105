@@ -13,12 +13,16 @@
 
 <h4>View All Books:</h4>
 <span style="display:inline-block; width: 130px; font-weight:bold;">[Title]</span>
-
+<span style="display:inline-block; width: 120px; font-weight:bold;">[Author]</span>
+<span style="display:inline-block; width: 100px; font-weight:bold;">[Price]</span>
+<span style="display:inline-block; width: 120px; font-weight:bold;">[Published Date]</span>
 
 <br>
 <% @books.each do |book| %>
     <span style="display:inline-block; width: 130px;"><%= book['title'] %></span>
-    
+    <span style="display:inline-block; width: 120px;"><%= book['author'] %></span>
+    <span style="display:inline-block; width: 100px;"><%= book['price'] %></span>
+    <span style="display:inline-block; width: 120px;"><%= book['published_date'] %></span>
     <a style="display:inline-block; width: 50px;" href = "/read/<%=book['title']%>">Read</a>
     <a style="display:inline-block; width: 60px;" href = "/edit/<%=book['title']%>">Update</a>
     <a style="display:inline-block; width: 50px;" href = "/remove/<%=book['title']%>">Remove</a>
